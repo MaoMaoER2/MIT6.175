@@ -82,6 +82,12 @@ module mkTbMulModule(
         end
     endrule
 
+    rule out_result;
+            Bit#(TAdd#(n,n)) test <- dut.result();
+            $display("result %0d", test);
+    endrule
+
+
     rule read( read_count != 128 && dut.result_ready );
         Bit#(n) a = tpl_1( operands_fifo.first() );
         Bit#(n) b = tpl_2( operands_fifo.first() );
@@ -96,7 +102,7 @@ module mkTbMulModule(
             $display("FAILED case %0d", read_count);
             $display("    if signed: %0d * %0d DUT gave %0d instead of %0d", a_signed, b_signed, test_signed, expected_signed);
             $display("    if unsigned: %0d * %0d DUT gave %0d instead of %0d", a, b, test, expected);
-            $finish;
+            //$finish;
         end else if( verbose ) begin
             Int#(n) a_signed = unpack(a);
             Int#(n) b_signed = unpack(b);

@@ -23,6 +23,8 @@ cf: compile
 %.tb: compile
 	bsc -sim -e mkTb$(patsubst %.tb,%,$@) -bdir buildDir -info-dir buildDir -simdir buildDir -o sim$(patsubst %.tb,%,$@)
 
+cfnc: cf
+
 clean:
 	rm -rf buildDir sim*
 

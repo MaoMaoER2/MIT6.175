@@ -46,7 +46,7 @@ module mkTestBench#(Fft fft)();
             for (Integer i = 0; i < fftPoints; i = i + 1) begin
                 $display ("\t(%x, %x) != (%x, %x)", rc[i].rel, rc[i].img, rf[i].rel, rf[i].img);
             end
-            $finish;
+            //$finish;
         end
     endrule
 
