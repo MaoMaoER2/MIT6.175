@@ -1,0 +1,41 @@
+TWOSTAGE:
+    Benchmark tower
+    Cycles = 16291
+    Insts  = 15210
+
+    Benchmark vvadd
+    Cycles = 6958
+    Insts  = 6654
+
+    Benchmark median
+    Cycles = 18887
+    Insts  = 17536
+
+    Benchmark multiply
+    Cycles = 60588
+    Insts  = 54270
+
+    Benchmark qsort
+    Cycles = 343715
+    Insts  = 318647
+
+TWOSTAGEBTB:
+    Benchmark tower
+    Cycles = 15634
+    Insts  = 15210
+
+    Benchmark vvadd
+    Cycles = 6660
+    Insts  = 6654
+
+    Benchmark median
+    Cycles = 17991
+    Insts  = 17536
+
+    Benchmark multiply
+    Cycles = 54862
+    Insts  = 54270
+
+    Benchmark qsort
+    Cycles = 334212
+    Insts  = 318647
